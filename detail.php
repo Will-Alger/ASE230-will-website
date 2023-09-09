@@ -77,35 +77,7 @@ $person = $data[$_GET['id']]
 								<div class="resume-timeline position-relative">
 									<!-- Loop through each resume item and output its data -->
 									<?php foreach ($person['resume_items'] as $item) : ?>
-										<article class="resume-timeline-item position-relative pb-5">
-											<div class="resume-timeline-item-header mb-2">
-												<div class="d-flex flex-column flex-md-row">
-													<h3 class="resume-position-title font-weight-bold mb-1"><?= $item['position'] ?></h3>
-													<div class="resume-company-name ms-auto"><?= $item['company'] ?></div>
-												</div><!--//row-->
-												<div class="resume-position-time"><?= $item['time'] ?></div>
-											</div><!--//resume-timeline-item-header-->
-											<div class="resume-timeline-item-desc">
-												<p><?= $item['desc'] ?></p>
-												<?php if (!empty($item['achievements'])) : ?>
-													<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-												<?php endif; ?>
-												<ul>
-													<?php foreach ($item['achievements'] as $achievement) : ?>
-														<li><?= $achievement ?></li>
-													<?php endforeach; ?>
-												</ul>
-												<?php if (!empty($item['technologies'])) : ?>
-													<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-												<?php endif; ?>
-
-												<ul class="list-inline">
-													<?php foreach ($item['technologies'] as $technology) : ?>
-														<li class="list-inline-item"><span class="badge bg-secondary badge-pill"><?= $technology ?></span></li>
-													<?php endforeach; ?>
-												</ul>
-											</div>
-										</article>
+										<?= displayWorkExperience($item) ?>
 									<?php endforeach; ?>
 								</div>
 							</div>
