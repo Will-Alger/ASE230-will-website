@@ -76,8 +76,8 @@ $person = $data[$_GET['id']]
 							<div class="resume-section-content">
 								<div class="resume-timeline position-relative">
 									<!-- Loop through each resume item and output its data -->
-									<?php foreach ($person['resume_items'] as $item) : ?>
-										<?= displayWorkExperience($item) ?>
+									<?php foreach ($person['resume_items'] as $experience) : ?>
+										<?= displayWorkExperience($experience) ?>
 									<?php endforeach; ?>
 								</div>
 							</div>
