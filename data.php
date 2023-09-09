@@ -19,7 +19,8 @@ $data = array(
             "email" => "algerw@icloud.com",
             "phone_number" => "502-758-4615",
             "summary" => "Adaptable CS undergraduate graduating in December 2023 with full-stack experience seeking full-time opportunity. Committed to continuous learning and growth in a dynamic and problem-solving environment.",
-            "img" => "assets/images/profile.jpg"
+            "img" => "assets/images/profile.jpg",
+            "dob" => "02/22/2002"
         ),
         "links" => array(
             "linked_in" => "linkedin.com/in/williamalger/",
@@ -130,7 +131,8 @@ $data = array(
             "email" => "billybob@hillbillycode.com",
             "phone_number" => "+1 800 555 1234",
             "summary" => "Born and raised in the Appalachian mountains, I found my passion for coding while trying to automate my moonshine production. Specialized in PHP, JavaScript, and Python, with a knack for solving complex problems and a love for clean, efficient code. Y'all won't find a more dedicated programmer!",
-            "img" => "assets/images/profile2.png"
+            "img" => "assets/images/profile2.png",
+            "dob" => "03/02/1998"
         ),
         "links" => array(
             "linked_in" => "https://www.linkedin.com/in/billybob",
@@ -235,7 +237,8 @@ $data = array(
             "email" => "ogg@cave.io",
             "phone_number" => "+1234567890",
             "summary" => "Innovative Caveman Software Engineer with over 100,000 years of experience in software development. Specializes in rock-based programming and fire-driven technologies.",
-            "img" => "assets/images/profile3.png"
+            "img" => "assets/images/profile3.png",
+            "dob" => "03/05/0022"
         ),
         "links" => array(
             "linked_in" => "linkedin.com/in/ogg",

@@ -4,6 +4,7 @@
 
 <?php
 require_once 'data.php';
+require_once 'methods.php';
 $person = $data[$_GET['id']]
 ?>
 
@@ -43,7 +44,8 @@ $person = $data[$_GET['id']]
 						<div class="row p-4 justify-content-center justify-content-md-between">
 							<div class="primary-info col-auto">
 								<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"></h1>
-								<div class="title mb-3"><?= $person['personal_info']['job_title'] ?></div>
+								<div class="title mb-1"><?= $person['personal_info']['job_title'] ?></div>
+								<h6 class="mt-0 mb-3 text-white"><i><?= calculateAge($person['personal_info']['dob']) ?> years old</i></h6>
 								<ul class="list-unstyled">
 									<li class="mb-2"><a class="text-link" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i><?= $person['personal_info']['email'] ?></a></li>
 									<li><a class="text-link" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i><?= $person['personal_info']['phone_number'] ?></a></li>
