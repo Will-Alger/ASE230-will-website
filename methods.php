@@ -13,7 +13,10 @@ function calculateAge($dob)
     return $age;
 }
 
-
+/*
+   Input -> This function takes the reference to the data array, as well as the index of the card to display for a person
+   Output <- this function returns the html for a person card with their respective data
+*/
 function displayCard(&$data, $index)
 {
     ob_start(); ?>
@@ -40,6 +43,10 @@ function displayCard(&$data, $index)
 }
 
 
+/*
+   Input -> This function takes an array of work experience data
+   Output <- this function returns the html for a work experience with their respective data
+*/
 function displayWorkExperience(&$experience)
 {
     ob_start(); ?>
@@ -48,9 +55,9 @@ function displayWorkExperience(&$experience)
             <div class="d-flex flex-column flex-md-row">
                 <h3 class="resume-position-title font-weight-bold mb-1"><?= $experience['position'] ?></h3>
                 <div class="resume-company-name ms-auto"><?= $experience['company'] ?></div>
-            </div><!--//row-->
+            </div>
             <div class="resume-position-time"><?= $experience['time'] ?></div>
-        </div><!--//resume-timeline-item-header-->
+        </div>
         <div class="resume-timeline-item-desc">
             <p><?= $experience['desc'] ?></p>
             <?php if (!empty($experience['achievements'])) : ?>
