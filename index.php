@@ -28,8 +28,8 @@
 
 	Name: William Alger
 	Class: ASE 230
-	Date: 8/27/2023
-	Type: Assignment 2
+	Date: 9/9/2023
+	Type: Assignment 3
 
 -->
 
@@ -43,25 +43,7 @@ require_once 'methods.php';
 		<div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
 			<h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
 			<?php foreach ($data as $id => $person) : ?>
-				<header class="resume-header mt-4 pt-4 pt-md-0">
-					<div class="row">
-						<div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-							<img class="picture" src="<?= $person['personal_info']['img'] ?>" alt="">
-						</div><!--//col-->
-						<div class="col">
-							<div class="row p-4 justify-content-center justify-content-md-between">
-								<div class="primary-info col-auto">
-									<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?= $person['personal_info']['name']; ?></h1>
-									<div class="title mb-1"><?php echo $person['personal_info']['job_title']; ?></div>
-									<h6 class="mt-0 mb-3 text-white"><i><?= calculateAge($person['personal_info']['dob']) ?> years old</i></h6>
-									<a href="detail.php?id=<?= $id; ?>" class="btn btn-secondary">See full profile</a>
-								</div>
-								<div class="secondary-info col-auto mt-2">
-								</div>
-							</div>
-						</div>
-					</div>
-				</header>
+				<?= displayCard($data, $id) ?>
 			<?php endforeach; ?>
 		</div>
 	</article>
